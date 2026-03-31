@@ -33,9 +33,9 @@ const VERDICT_PILL: Record<string, string> = {
 export default function TeacherPage() {
   const [activePreset, setActivePreset] = useState<string | null>(null);
 
-  function handleExport() {
+function handleExport() {
     const preset = activePreset
-      ? POLICY_PRESETS.find((p) => p.id === activePreset)
+      ? POLICY_PRESETS.find((p) => p.id === activePreset) ?? null
       : null;
 
     const html = buildExportHTML(preset);
