@@ -10,7 +10,7 @@ import {
   MATERIAL_OPTIONS,
   SENSITIVE_MATERIAL_OPTIONS,
 } from '@/data/policy-presets';
-import type { CheckerAnswers, TaskType, Stage, AIAction, CoursePolicy, Material } from '@/types';
+import type { CheckerAnswers, Material } from '@/types';
 import { ProgressBar, StepLabel, OptionButton, WarningBox } from '@/components/ui';
 
 // We store the result in sessionStorage so the result page

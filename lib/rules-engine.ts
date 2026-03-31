@@ -96,14 +96,7 @@ const ACTION_SCORES: Record<AIAction, number> = {
 // ----------------------------------------------------------
 // Policy modifiers: delta applied to base score
 // ----------------------------------------------------------
-const POLICY_MODIFIERS: Record<CoursePolicy, number> = {
-  'No AI allowed': 10, // hard override handled separately
-  'AI allowed only with disclosure': 0,
-  'AI allowed for language support only': 2,
-  'No specific policy given by teacher': 0,
-  'Institution-level guidance only': 0,
-  'I am not sure': 0,
-};
+
 
 // ----------------------------------------------------------
 // Task modifiers for specific risky combinations

@@ -24,7 +24,6 @@ export function ResultView({ result }: ResultViewProps) {
     disclosure,
     hasSensitive,
     isUnclear,
-    isDisclosure,
     extras,
   } = result;
 
