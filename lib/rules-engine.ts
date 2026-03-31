@@ -362,8 +362,6 @@ function buildSaferAlternative(action: AIAction, task: TaskType): string {
       'Consult your institution\'s academic writing guide or writing support service. Many offer free workshops or one-to-one sessions.',
     'Analyse data':
       'Contact your institution\'s statistical support service or consult your supervisor directly for guidance on analysis methods.',
-    'Summarise sources':
-      'Read the abstract and conclusion yourself. Take your own notes. Treat any AI summary as a rough pointer only, then verify against the original.',
   };
 
   if (task === 'Reflection' && action === 'Rewrite my sentences') {
