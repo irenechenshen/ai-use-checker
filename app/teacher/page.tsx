@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { POLICY_PRESETS, RULE_MATRIX } from '@/data/policy-presets';
+import type { PolicyPreset } from '@/types';
 import { SectionTitle } from '@/components/ui';
 import type { PolicyPreset } from '@/types';
 
@@ -34,9 +35,10 @@ export default function TeacherPage() {
   const [activePreset, setActivePreset] = useState<string | null>(null);
 
 function handleExport() {
-    const preset = activePreset
-      ? POLICY_PRESETS.find((p) => p.id === activePreset) ?? null
-      : null;
+    const found = activePreset
+      ? POLICY_PRESETS.find((p) => p.id === activePreset)
+      : undefined;
+    const preset: PolicyPreset | null = found ?? null;
 
     const html = buildExportHTML(preset);
     const w = window.open('', '_blank');
