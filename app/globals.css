@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap');
+
+@layer base {
+  :root {
+    font-family: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .font-serif {
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+  }
+
+  /* Smooth page transitions */
+  main {
+    animation: fadeUp 0.2s ease;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer utilities {
+  /* Print styles */
+  @media print {
+    nav, footer, .no-print { display: none !important; }
+    body { background: white; }
+    .rounded-2xl, .rounded-xl { border-radius: 0 !important; }
+  }
+}
