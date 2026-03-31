@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { POLICY_PRESETS, RULE_MATRIX } from '@/data/policy-presets';
 import type { PolicyPreset } from '@/types';
 import { SectionTitle } from '@/components/ui';
-import type { PolicyPreset } from '@/types';
 
 const PRESET_COLORS: Record<string, string> = {
   red: 'border-red-200 bg-red-50',
